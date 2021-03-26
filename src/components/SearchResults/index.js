@@ -1,5 +1,16 @@
-import React from "react";
+import React, { Component } from "react";
 import "./style.css";
+
+
+// class Search extends Components {
+//   constructor(props){
+//     super(props)
+//     this.state = {
+//       employees,
+//       filteredEmployees: []
+//     }
+//   }
+// }
 
 function SearchResults(props) {
   return (
@@ -7,10 +18,13 @@ function SearchResults(props) {
       {props.results.map(result => (
         <li key={result.email } className="list-group-item">
           <img alt="user" src={result.picture.large} className="img-fluid" />
-          {result.name.first + " " + result.name.last} 
+          {result.name.first + " " + result.name.last + " Email: " + result. email} 
+          
+
         </li>
       ))}
     </ul>
+   
    
   );
 }

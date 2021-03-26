@@ -13,6 +13,7 @@ class Search extends Component {
     breeds: [],
     results: [],
     error: ""
+    
   };
 
   // When the component mounts, get a list of all available base breeds and update this.state.breeds
@@ -43,9 +44,10 @@ class Search extends Component {
   };
   render() {
     return (
+      
       <div>
         <Container style={{ minHeight: "80%" }}>
-          <h1 className="text-center">Search by Employee Name</h1>
+           <h1 className="text-center">Search by Employee Name</h1>
           <Alert
             type="danger"
             style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}

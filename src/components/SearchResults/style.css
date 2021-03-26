@@ -1,6 +1,11 @@
 ul.search-results img {
-  margin: 0 auto;
+  margin: 5px;
+  position: relative;
 }
+
+/* ul.search-results img {
+  
+} */
 
 /* .list-group {
   background: #fff;
@@ -11,7 +16,7 @@ ul.search-results img {
   width: 325px;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: left;
-}
+} */
 
 .list-group > .img {
   height: 60%;
@@ -21,4 +26,4 @@ ul.search-results img {
 }
 .list-group > .img-container > img {
   width: 60%;
-} */
+}
