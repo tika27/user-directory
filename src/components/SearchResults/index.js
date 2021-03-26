@@ -6,11 +6,12 @@ function SearchResults(props) {
     <ul className="list-group search-results">
       {props.results.map(result => (
         <li key={result.email } className="list-group-item">
-          <img alt="user" src={result.picture.medium} className="img-fluid" />
+          <img alt="user" src={result.picture.large} className="img-fluid" />
           {result.name.first + " " + result.name.last} 
         </li>
       ))}
     </ul>
+   
   );
 }
 
