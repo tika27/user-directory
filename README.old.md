@@ -2,6 +2,8 @@
 
 React homework: Employee Directory where user can search employee name sorting first name.
 
+This project allow/challenge me to use my knowledge and push me to do more focus on react it self.
+
 # User Story
 
 As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
