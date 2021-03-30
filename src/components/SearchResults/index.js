@@ -13,18 +13,24 @@ import "./style.css";
 // }
 
 function SearchResults(props) {
+
   return (
+    <div>
+      <button onClick={() => props.sortByName()} >
+       Name
+      </button>
     <ul className="list-group search-results">
+      
       {props.results.map(result => (
         <li key={result.email } className="list-group-item">
           <img alt="user" src={result.picture.large} className="img-fluid" />
-          {result.name.first + " " + result.name.last + " Email: " + result. email} 
+          {result.name.first + " " + result.name.last  + " Email: " + result. email} 
           
 
         </li>
       ))}
     </ul>
-   
+    </div>
    
   );
 }

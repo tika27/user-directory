@@ -26,8 +26,29 @@ class Search extends Component {
       .catch(err => console.log(err));
   }
 
+  findUsers=()=>{
+    var newArr = this.state.breeds.filter(function(rate){
+      return rate.name.first.includes(this.state.search);
+    });
+    this.setState({ breeds: newArr });
+  }
+
   handleInputChange = event => {
+   event.preventDefault();
+
     this.setState({ search: event.target.value });
+    console.log(this.state.search)
+    //this.findUsers();
+ 
+  };
+
+
+
+  sortByName = () => {
+  
+    return this.state.breeds.sort((a, b) => a.name.first - b.name.first);
+    //this.setState(breeds);
+
   };
   
 
@@ -55,11 +76,13 @@ class Search extends Component {
             {this.state.error}
           </Alert>
           <SearchForm
-            handleFormSubmit={this.handleFormSubmit}
+      
             handleInputChange={this.handleInputChange}
             breeds={this.state.breeds}
           />
-          <SearchResults results={this.state.breeds} />
+          <SearchResults 
+           sortByName={this.sortByName}
+          results={this.state.breeds} />
         </Container>
       </div>
     );
